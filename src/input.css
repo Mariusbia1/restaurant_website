@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    .menu_toggle{
+        @apply w-10  flex flex-col items-center justify-center cursor-pointer
+    }
+    .menu_toggle span{
+        @apply w-[1.5rem] h-[0.2rem] bg-primary rounded-3xl transition duration-500
+    }
+
+    .contain1 h1{
+     @apply text-base
+    }
+    .contain1 span{
+     @apply text-sm text-gray-500
+    }
+   
+
+}
+@layer utilities{
+    .menu_toggle::before{
+        position: absolute;
+        content: "";
+        width: 1.5rem;
+        height:0.2rem;
+        background-color:  #f03328 ;
+        transition: 0.5s;
+        transform: translateY(10px);
+        border-radius: 50px;
+       
+    }
+    .menu_toggle::after{
+        position: absolute;
+        content: "";
+        width: 1.5rem;
+        height: 0.2rem;
+        background-color:  #f03328 ;
+        transition: 0.5s;
+        transform: translateY(-10px);
+         border-radius: 50px;
+       
+    }
+    .menu_toggle span.active{
+        width: 0px;
+    }
+    .menu_toggle.active::before{
+        transform: rotate(45deg);
+    }
+    .menu_toggle.active::after{
+        transform: rotate(-45deg);
+    }
+    .menu.responsive{
+        position: absolute;
+        top: 3rem;
+        left: 0;
+        display: flex;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-size: 15px;
+        background-color: rgba(128, 128, 128, 0);
+        z-index: 2;
+
+        
+    }
+    .navbar li:hover{
+        color: #f03328;
+        text-decoration-line: underline;
+        transition: 0.2s;
+    }
+     .first p{
+       word-spacing: 3px; 
+       letter-spacing: 2px;
+     
+    }
+    
+}
