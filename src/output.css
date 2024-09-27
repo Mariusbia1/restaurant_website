@@ -681,6 +681,18 @@ video {
   margin-bottom: 5rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-\[\] {
+  margin-top: ;
+}
+
+.mt-\[25\] {
+  margin-top: 25;
+}
+
 .inline-block {
   display: inline-block;
 }
